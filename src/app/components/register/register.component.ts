@@ -6,10 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./register.component.scss']
 })
 export class RegisterComponent implements OnInit {
-
-  constructor() { }
+  public page_title: string;
+  constructor() { 
+    this.page_title = 'Registrate'
+  }
 
   ngOnInit(): void {
+    console.log('Componente de registro lanzado');
   }
 
 }
