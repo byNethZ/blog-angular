@@ -1,10 +1,4 @@
-<div class="loading" *ngIf="!posts">Cargando</div>
-
-<div class="container-fluid mt-3" *ngIf="posts">
-  <h1>{{ page_title }}</h1>
-  <hr />
-
-  <div class="card-columns">
+<div class="card-columns">
     <article class="card w-100" *ngFor="let post of posts">
       <div class="card-header">
         <h3>
@@ -33,14 +27,13 @@
               class="btn btn-warning mr-3"
               >Editar</a
             >
-            
 
             <!-- Button trigger modal -->
             <button
               type="button"
               class="btn btn-danger"
               data-bs-toggle="modal"
-              [attr.data-bs-target]="'#exampleModal'+post.id"
+              [attr.data-bs-target]="'#exampleModal' + post.id"
             >
               Borrar Entrada
             </button>
@@ -48,7 +41,7 @@
             <!-- Modal -->
             <div
               class="modal fade"
-              id="exampleModal{{post.id}}"
+              id="exampleModal{{ post.id }}"
               tabindex="-1"
               aria-labelledby="exampleModalLabel"
               aria-hidden="true"
@@ -66,9 +59,16 @@
                       aria-label="Close"
                     ></button>
                   </div>
-                  <div class="modal-body">Vas a borrar definitivamente {{post.title}}</div>
+                  <div class="modal-body">
+                    Vas a borrar definitivamente {{ post.title }}
+                  </div>
                   <div class="modal-footer">
-                    <a (click)="deletePost(post.id)" class="btn btn-danger" data-bs-dismiss="modal" >Borrar</a>
+                    <a
+                      (click)="deletePost(post.id)"
+                      class="btn btn-danger"
+                      data-bs-dismiss="modal"
+                      >Borrar</a
+                    >
                     <button
                       type="button"
                       class="btn btn-warning"
@@ -80,10 +80,8 @@
                 </div>
               </div>
             </div>
-            
           </span>
         </div>
       </div>
     </article>
   </div>
-</div>

@@ -1,6 +1,6 @@
 .avatar_mask{
-    width: 3rem;
-    height: 3rem;
+    width: 5rem;
+    height: 5rem;
     overflow: hidden;
     border-radius: 50%;
     display: flex;
@@ -8,10 +8,5 @@
     align-items: center;
 }
 .avatar_mask img{
-    height: 3rem;
-}
-
-footer{
-    margin-top: 5rem;
-    color: lightgrey;
+    height: 5rem;
 }
